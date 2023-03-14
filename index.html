@@ -14,24 +14,48 @@
 	<body>
 		<div class="container-fluid">
 			<div id="PNL-header" class="row">
-				<div class="Menu-Element col-2"><img src="Logo.png" alt="" /></div>
-				<div class="Menu-Element col"><a href="#">LINK 1</a></div>
-				<div class="Menu-Element col"><a href="#">LINK 2</a></div>
-				<div class="Menu-Element col"><a href="#">LINK 3</a></div>
-				<div class="Menu-Element col-6"></div>
+				<a class="col-md-2" href="https://twitch.tv/NekoZakx"><img id="logo" src="https://nekozakx.github.io/Streamer/Logo.png" alt="" /></a>
+				<a class="Menu-Element col-md-2" href="#Watch">Regarder le stream</a>
+				<a class="Menu-Element col-md-2" href="#AboutMe">À propos</a>
+				<a class="Menu-Element col-md-2" href="#Games">Mes jeux</a>
+				<a class="Menu-Element col-md-2" href="#Streamers">Mes streamer</a>
+				<a class="col-md-2"></a>
 			</div>
-			<div class="panel">
-				<iframe id="twitch-chat-embed"
-						src="https://player.twitch.tv/?channel=nekozakx&parent=nekozakx.github.io"
-						height="500"
-						width="350">
-				</iframe>
+			<div id="Watch" class="container">
+				<div class="row">
+					<div class="watchCol col-md-9">
+						<iframe src="https://player.twitch.tv?channel=nekozakx&parent=nekozakx.github.io&referrer=https%3A%2F%2Fnekozakx.github.io%2FStreamer%2F" 
+							allowfullscreen="" 
+							scrolling="no" 
+							frameborder="0" 
+							allow="autoplay; fullscreen" 
+							title="Twitch" 
+							sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" 
+							width="100%" 
+							height="500">
+						</iframe>
 				
-				<iframe id="twitch-chat-embed"
-						src="https://www.twitch.tv/embed/nekozakx/chat?parent=nekozakx.github.io"
-						height="500"
-						width="350">
-				</iframe>
+					</div>
+					<div class="watchCol col-md-3">
+						<iframe id="twitch-chat-embed"
+							src="https://www.twitch.tv/embed/nekozakx/chat"
+							height="500"
+							width="100%">
+						</iframe>
+						
+					</div>
+				
+				</div>
+			</div>
+			<div id="AboutMe" class="panel container">
+				<h1>À Propos</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta in magna nec tincidunt. Vivamus placerat enim quis volutpat tempus. Ut id commodo augue, a semper ligula. Ut ut libero in mi luctus aliquet non a magna. Fusce dictum nibh risus, et eleifend magna viverra non. Aenean dui tortor, tempus at elementum et, fringilla non est. Phasellus ut nunc sapien. Nulla facilisi. Integer in diam eu lectus sagittis lobortis. Aenean dignissim, felis at euismod rutrum, felis eros viverra turpis, vitae condimentum risus dolor et massa.</p>
+			</div>
+			<div id="Games" class="panel container">
+				<h1>Mes jeux</h1>
+			</div>
+			<div id="Streamers" class="panel container">
+				<h1>Mes streamers</h1>
 			</div>
 		</div>
 		
@@ -51,9 +75,66 @@
 		<style>
 			html,body {
 				padding:0;margin:0;
-				background-color: #000000;
-				color: #FFF;
+				background-color: #333333;
+				background-image: url('https://nekozakx.github.io/Streamer/BG.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				font-family: 'Trebuchet MS', sans-serif;
 			}
+			
+			iframe { padding: 0; margin: 0; }
+			
+			/***** BEGIN HEADER *****/
+			#PNL-header {
+				padding:10px;
+				line-height: 50px;
+				vertical-align: middle;
+				/*background-color: #409cdf;*/
+			}
+			
+			.Menu-Element {
+				background-color: #FFFFFF;
+				text-align: center;
+				/*border-bottom: 2px solid #AAAAAA;*/
+			}
+			
+			a.Menu-Element {
+				text-decoration: none;
+				font-size: 16px;
+				color: #000000;
+				transition: all ease 0.25s;
+			}
+			
+			a.Menu-Element:hover {
+				background-color: #398fd8;
+				color: #FFFFFF;
+				border-bottom: 0px;
+			}
+			
+			#logo {
+				max-height: 50px;
+				max-width: 100%;
+			}
+			/***** END HEADER *****/
+			
+			
+			/***** BEGIN WATCH *****/
+			#Watch .watchCol { 
+				padding: 0; margin: 0; 
+			}
+			/***** END WATCH *****/
+			
+			
+			.panel {
+				background-color: #FFFFFF;
+				margin-top: 30px;
+				padding: 15px 25px;
+			}
+			
+			.panel h1 {
+				font-size: 32px;
+			}
+			
 		</style>
 		<script></script>
 		
